@@ -41,8 +41,7 @@ if user_input:
         st.markdown(user_input)
 
     # Generate assistant's response
-    assistant_prompt = f"User has reported the following symptoms: {user_input}. Provide a general remedy or advice."
-    assistant_response = get_response(assistant_prompt)
+    assistant_response = get_response(user_input)
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
     
     with st.chat_message("assistant"):
